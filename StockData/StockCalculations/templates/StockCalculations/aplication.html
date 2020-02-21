@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  {% load static%}
+  <link rel="stylesheet" href="{% static 'StockCalculations/css/style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+{% csrf_token %}
+<body>
+      <div class = "row" style = "background-color:#1F1B24;  height:100%" >
+      <!-------------- Side Bar ---------------------->
+
+            <div class="col-sm-2" style="background-color:#121212; height:100%;position:fixed">
+                <div class = "container">
+                 <div style = "color:white; margin-top:250px;font-size:40px;height:100%">
+                    <div style = "font-size:100px;margin-left:75px;color:#1F1B24"><i class="fa fa-chart-line"></i></div>
+                    <div style = "font-size:100px;margin-left:75px;color:#1F1B24"><span class="fa fa-database"></span></div>
+                  </div>
+                </div>
+            </div>
+      <!-------------- Fim Side Bar ------------------->
+
+      <!------------------ Conteudo -------------------->
+            <div class = "col-sm-10" id ="conteudo" style="margin-left:15%">
+            <!------------------ Inputs -------------------->
+                  <div id="Inputs">
+                        <!------------------ Linha1 -------------------->
+                        <div class="container">
+                           <div class = "row justify-content-md-center classRow" id = 'idrow1'>
+                              <!------------------ ColunaT1 -------------------->
+                              <div class="col-sm-4">
+                                <div class="col-sm-10" id='idColunaT1'>
+                                </div>
+                                <div class="col-sm-10" id='idColunaS1'>
+                                <!-- <select class="form-control">
+                                  <option selected disabled hidden>Choose here</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select> -->
+                                </div>
+                              </div>
+                              <!------------------ FimColunaT1 -------------------->
+
+                              <!------------------ ColunaT2 -------------------->
+                              <div class="col-sm-4">
+                                <div class="col-sm-10" id='idColunaT2'></div>
+                                <div class="col-sm-10" id='idColunaS2'></div>
+                              </div>
+                              <!------------------ FimColunaT2 -------------------->
+
+                              <!------------------ ColunaT3 -------------------->
+                              <div class="col-sm-4">
+                                <div class="col-sm-10" id='idColunaT3'></div>
+                                <div class="col-sm-10" id='idColunaS3'></div>
+                              </div>
+                              <!------------------ FimColunaT3 -------------------->
+                            </div>
+                        </div>
+                        <!------------------ FimLinha1 -------------------->
+                  </div>
+            <!------------------ FimInputs -------------------->
+
+            <!------------------ Botoes -------------------->
+            <div class="container">
+            <div class = "row justify-content-md-center" id = 'botão'>
+              <div class = "col-sm-4"></div>
+              <div class = "col-sm-4">
+                <div class = "col-sm-10"></div>
+                <div class = "col-sm-2">
+                  <button onclick = "AdicionaLinhaBotao1()">+</button>
+                </div>
+              </div>
+              <div class = "col-sm-4">
+                <div class = "col-sm-10"></div>
+                <div class = "col-sm-2">
+                  <button onclick = "AdicionaLinhaBotao2()">+</button>
+                </div>
+              </div>
+
+            </div>
+            </div>
+            <!------------------ FimBotoes -------------------->
+
+            <!------------------ Submit -------------------->
+            <div class="container">
+            <div class = "row justify-content-md-center botaoSubmit" id = 'botãos'>
+              <div class = "col-sm-4"></div>
+              <div class = "col-sm-4"></div>
+              <div class = "col-sm-4">
+                <div class = "col-sm-10"></div>
+                <div class = "col-sm-2">
+                <input type="submit" value="Submit" onclick = "CreateBlog()">
+              </div>
+            </div>
+
+
+            </div>
+            </div>
+            <!------------------ FimSubmit -------------------->
+            <div class="container" id = "resultado">
+            </div>
+
+            <div id = "imagem"></div>
+          </div>
+      <!------------- FimConteudo -------------------->
+      </div>
+
+<script src="{% static 'StockCalculations/js/funcoes.js' %}"></script>
+</body>
+</html>

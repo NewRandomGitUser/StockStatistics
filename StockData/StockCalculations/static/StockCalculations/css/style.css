@@ -1,0 +1,62 @@
+html,body {
+  height: 100%;
+}
+
+body{
+  font-family: "Lato", sans-serif;
+  background-color:#1F1B24;
+}
+
+
+
+.top5 { margin-top:30px; }
+.top6 { margin-top:50px; }
+
+.classRow{}
+
+.classOpcoes{
+  text-align:center;
+  background-color:#434343;
+  color:white;
+}
+
+.classItem{}
+
+.classAtivos{
+  text-align:center;
+  background-color:#434343;
+  color:white;
+}
+
+.classPeriodoInicial{
+  width:50%;
+  display:inline;
+  background-color:#434343;
+  color:white;
+}
+
+.classPeriodoFinal{
+  width:50%;
+  display:inline;
+  background-color:#434343;
+  color:white;
+}
+
+.classOperacoes{
+  text-align:center;
+  background-color:#434343;
+  color:white;
+}
+
+.botaoSubmit{
+  margin-top:40px;
+  color:#434343;
+}
+
+.tabelaResultado{
+  background-color:#434343;
+  color:white;
+  margin-right:20px;
+  text-align:center;
+  margin-top:50px;
+}
